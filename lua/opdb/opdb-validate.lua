@@ -1,7 +1,7 @@
 local M = {}
 
 -- Function to load credentials from 1Password
-function M.load_credentials(callback)
+function M.load_credentials(db_names, callback)
 	-- Prompt for the 1Password master password
 	local master_password = vim.fn.inputsecret("Enter 1Password Master Password: ")
 
@@ -16,12 +16,6 @@ function M.load_credentials(callback)
 		callback(false)
 		return
 	end
-
-	-- List of database names to fetch from 1Password (adjust as needed)
-	local db_names = {
-		"my_database_1",
-		"my_database_2",
-	}
 
 	-- Table to store the database connection strings
 	local dbs = {}
