@@ -1,6 +1,6 @@
 local M = {}
 M.options = {
-	dbs = { "database1" },
+	db_names = { "database1" },
 }
 
 function M.setup(user_opts)
