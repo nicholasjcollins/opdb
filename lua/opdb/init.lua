@@ -26,4 +26,8 @@ vim.api.nvim_create_user_command("OPDB", function()
 	M.open_dbui_with_credentials()
 end, {})
 
+M.setup = function(user_opts)
+	config.setup(user_opts)
+end
+
 return M
